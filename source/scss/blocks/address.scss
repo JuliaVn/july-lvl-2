@@ -1,0 +1,13 @@
+.address {
+  font-style: normal;
+  &__title{
+    font-size: 18px;
+    line-height: 30px;
+  }
+  &__subtitle,
+  &__text {
+    line-height: 30px;
+    color: #444444;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,17 @@
+.goods {
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    border: 1px solid #ececec;
+  }
+  &__title {
+    font-size: 17px;
+  }
+  &__info {
+    color: #444444;
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+}

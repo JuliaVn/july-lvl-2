@@ -1,0 +1,23 @@
+.category {
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    &--subject {
+      background-color: #63d1bb;
+    }
+    &--toy {
+      background-color: #56c3b2;
+    }
+  }
+  &__link {
+    color: #ffffff;
+    display: block;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 19px;
+  }
+}

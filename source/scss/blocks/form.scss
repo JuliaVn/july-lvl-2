@@ -1,0 +1,44 @@
+.form {
+  &__fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__legend {
+    text-transform: uppercase;
+    color: #63d1bb;
+    font-size: 17px;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__label {
+    font-size: 17px;
+  }
+  &__text {
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-family: inherit;
+    color: #444444;
+    font-size: 17px;
+    padding: 17px 0;
+  }
+  &__comment {
+    font-family: inherit;
+    border: 2px solid #000000;
+    color: #444444;
+    font-size: 17px;
+    padding: 18px;
+  }
+  &__text::placeholder,
+  &__comment::placeholder {
+    color: rgba(48, 48, 48, 0.3);
+  }
+
+  &__necessary {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+}

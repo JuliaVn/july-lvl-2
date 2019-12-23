@@ -3,43 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-img" src="" width="" height="" alt="Интернет магазин вещей ручной работы Мишка">
+    <header class="header">
+      <a class="header__logo">
+        <img class="header__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет магазин вещей ручной работы Мишка">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list main-nav__list--first">
-            <li class="main-nav__item">
-              <a href="catalog.html">Каталог товаров</a>
+      <button class="header__burger" type="button">Открыть меню</button>
+      <nav class="header__nav-wrp">
+          <ul class="header__nav-list header__nav-list--first">
+            <li class="header__nav-item">
+              <a href="catalog.html" class="header__nav-link">Каталог товаров</a>
             </li>
-            <li class="main-nav__item">
-              <a href="">Вязание на заказ</a>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a class="main-nav__search" href="">Поиск по сайту</a>
+          <ul class="header__nav-list header__nav-list--second">
+              <li class="header__nav-item">
+                <a class="header__nav-link header__nav-link--search" href="">Поиск по сайту</a>
               </li>
-              <li class="main-nav__item">
-                <a class="main-nav__basket" href="">Корзина: пока пуста</a>
+              <li class="header__nav-item">
+                <a class="header__nav-link header__nav-link--basket" href="">Корзина: пока пуста</a>
               </li>
           </ul>
-        </div>
       </nav>
     </header>
-    <main class="page-main">
-      <h1 class="title-index">Милый штуки ручной работы для дома</h1>
+    <main class="main">
+      <div class="main__title-index-wrap">
+        <h1 class="main__title-index">Милые штуки ручной работы для дома</h1>
+      </div>
       <section class="category">
         <ul class="category__list">
           <li class="category__item category__item--subject">
-            <a href="">Предметы интерьера</a>
+            <a class="category__link category__link--subject" href="">Предметы<br> интерьера</a>
           </li>
           <li class="category__item category__item--toy">
-            <a href="">Детские игрушки</a>
+            <a class="category__link category__link--toy" href="">Детские<br> игрушки</a>
           </li>
         </ul>
       </section>
@@ -63,7 +65,7 @@
             </tr>
           </table>
         </div>
-        <img class="weekly-product__img" src="" width="" height="" alt="Вязаные корзинки">
+        <img class="weekly-product__img" src="img/triple-set-mobile@1x.jpg" width="" height="" alt="Вязаные корзинки">
         <p class="weekly-product__price">Цена: 990 руб.</p>
         <a class="button" href="">Заказать</a>
       </section>
@@ -103,8 +105,8 @@
             </blockquote>
           </li>
         </ul>
-        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-        <button class="reviews__next" type="button">Следующий отзыв</button>
+        <button class="reviews__arrow reviews__arrow--prev" type="button">Предыдущий отзыв</button>
+        <button class="reviews__arrow reviews__arrow--next" type="button">Следующий отзыв</button>
         <a class="button reviews__write" href="">Написать</a>
       </section>
       <section class="contacts">
@@ -128,27 +130,33 @@
         <a class="button contacts__write" href="">Напишите нам</a>
       </section>
     </main>
-    <footer class="page-footer">
-      <a class="page-footer__logo">
-          <img class="page-footer__logo-img" src="" width="" height="" alt="Интернет магазин вещей ручной работы Мишка">
+    <footer class="footer">
+      <a class="footer__logo">
+          <img class="footer__logo-img" src="img/logo-footer.svg" width="" height="" alt="Интернет магазин вещей ручной работы Мишка">
       </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--inst" href="https://www.instagram.com/">Мы в Инстаграмме</a>
+      <div class="footer__social">
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.instagram.com/">
+              <img class="footer__social-img" src="img/icon-insta.svg" alt="Мы в Инстаграмме">
+            </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="https://www.facebook.com/">Мы в Фейсбуке</a>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://www.facebook.com/">
+              <img class="footer__social-img" src="img/icon-fb.svg" alt="Мы в Фейсбуке">
+            </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--tweet" href="https://twitter.com/">Мы в Твиттере</a>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="https://twitter.com/">
+              <img class="footer__social-img" src="img/icon-twitter.svg" alt="Мы в Твиттере">
+            </a>
           </li>
         </ul>
       </div>
-      <div class="page-footer__developed developed">
-        <strong class="developed__headline">Разработано</strong>
-        <a class="developed__link" href="https://htmlacademy.ru/">
-          <img class="developed__link-img" src="" width="" height="" alt="HTMLAcademy">
+      <div class="footer__developed">
+        <strong class="footer__developed-headline">Разработано</strong>
+        <a class="footer__developed-link" href="https://htmlacademy.ru/">
+          <img class="footer__developed-img" src="img/logo-htmlacademy.svg" width="" height="" alt="HTMLAcademy">
         </a>
       </div>
     </footer>
