@@ -4,12 +4,43 @@ $second-color: #000000;
 .header {
   background-color: $first-color;
   border-bottom: 1px solid #ececec;
+  position: relative;
 
- 
-
+ &__logo {
+   display: flex;
+   justify-content: center;
+   padding: 22px 30px;
+   transition: all .3s ease;
+ }
+ &__logo-img {
+  transition: all .3s ease;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+ }
  &__burger {
-    width: 21px;
-    height: 14px;
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   width: 21px;
+   height: 15px;
+   border: none;
+   padding: 0;
+   background-color: transparent;
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+   &--closed {
+    background-image: url(../img/icon-menu-open.svg);
+   }
+   &--opened {
+     top: 28px;
+     height: 21px;
+     background-image: url(../img/icon-menu-close.svg);
+   }
  }
 }
 
@@ -18,12 +49,183 @@ $second-color: #000000;
     list-style: none;
     padding: 0;
     margin: 0;
+    &--third,
+    &--small {
+      display: none;
+    }
   }
   &-item {
     font-size: 17px;
     padding: 30px 0;
+    padding-left: 75px;
+    border-top: 1px solid #ececec;
+    position: relative;
   }
   &-link {
     color: $second-color;
+    transition: all .3s ease;
+  }
+  &-info {
+    padding: 0;
+    margin: 0;
+  }
+  &-link[href] {
+    &:hover {
+      color: #666666;
+    }
+    &:active {
+      color: #b2b2b2;
+    }
+  }
+  &-svg {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+  }
+  &-svg:hover {
+    fill: #63d1bb;
+  }
+  &-svg:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .header {
+    &__burger--opened + &__nav-wrp {
+      display: block;
+    }
+    &__burger--closed + &__nav-wrp {
+     display: none;
+    }
+    &__burger--nojs {
+      display: none;
+    }
+    &__burger--nojs + &__nav-wrp {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    display: flex;
+    position: relative;
+    padding: 0 50px;
+    margin: 0 auto;
+    &__logo {
+      padding-left: 0;
+      padding-right: 0;
+      &-img {
+        width: 113px;
+        height: 46px;
+      }
+    }
+    &__burger {
+      display: none;
+    }
+    &__nav-wrp {
+      display: flex;
+      width: 100%;;
+      justify-content: flex-end;
+    }
+    &__nav-list {
+      display: flex;
+      &--first {
+        position: absolute;
+        left: 0;
+        bottom: -72px;
+        padding-left: 50px;
+        z-index: 11;
+      }
+      &--third {
+        display: none;
+      }
+      &--small {
+        position: absolute;
+        right: 0;
+        bottom: -72px;
+        padding-right: 50px;
+        z-index: 10;
+      }
+    }
+    &__nav-item {
+      border: none;
+      padding-left: 35px;
+      &--less {
+        font-size: 15px;
+      }
+      &--less:first-child {
+        padding-left: 0;
+      }
+      &--svg {
+        padding-left: 83px;
+        border-left: 1px solid #ececec;
+      }
+      &--small {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+    &__nav-link--search {
+      font-size: 0;
+    }
+    &__nav-svg {
+      left: 33px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    width: 1150px;
+    margin: 0 auto;
+    position: relative;
+    &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 9px 0;
+      &-img {
+        width: 149px;
+        height: 72px;
+      }
+    }
+    &__nav-wrp {
+      justify-content: space-between;
+    }
+    &__nav-list {
+      &--first {
+        position: static;
+        padding-left: 0;
+      }
+      &--third {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: -72px;
+        padding-left: 50px;
+        z-index: 11;
+      }
+    }
+    &__nav-item {
+      &--less {
+        font-size: 17px;
+      }
+      &--less:first-child {
+        padding-right: 35px;
+        border-right: 1px solid #ececec;
+      }
+      &--lesstwo {
+        font-size: 15px;
+        padding-left: 65px;
+      }
+      &--lesstwo:first-child {
+        padding-left: 0;
+      }
+      
+    }
   }
 }
