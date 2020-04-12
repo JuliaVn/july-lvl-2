@@ -1,0 +1,150 @@
+.weekly-product {
+  margin-bottom: 75px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 115vw;
+    bottom: -45px;
+    transform: translateX(50%);
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: contain;
+    transform: scaleX(1.4);
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    color: #63d1bb;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  &__text,
+  &__desc {
+    color: #444444;
+    font-weight: 400;
+  }
+  &__text {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  &__desc {
+    border-collapse: collapse;
+    margin: 0;
+    margin-bottom: 28px;
+    width: 100%;
+  }
+  &__field,
+  &__value {
+    padding: 14px 30px 12px 0;
+    border-bottom: 1px solid #ececec;
+  }
+  &__value {
+    padding-right: 0;
+  }
+  &__img {
+    margin: auto;
+    margin-bottom: 28px;
+    width: 100%;
+  }
+  &__price {
+    font-size: 17px;
+    color: #444444;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 28px;
+  }
+  &__button {
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .weekly-product {
+    margin-bottom: 110px;
+    &::after {
+      bottom: -65px;
+      height: 17px;
+    }
+    &__title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 55px;
+    }
+    &__title {
+      font-size: 43px;
+      line-height: 50px;
+      margin: 0;
+    }
+    &__subtitle {
+      margin: 0;
+      width: 130px;
+      text-align: center;
+    }
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__inner,
+    &__wrap-img,
+    &__inner-two {
+      width: 50%;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__inner,
+    &__inner-two {
+      padding-right: 50px;
+    }
+    &__inner-two {
+      margin-top: -102px;
+    }
+    &__img {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .weekly-product {
+    &::after {
+      bottom: -80px;
+      height: 20px;
+    }
+    &__title-wrapper {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-left: 20px;
+      position: relative;
+    }
+    &__title {
+      font-size: 53px;
+      line-height: 57px;
+    }
+    &__subtitle {
+      margin-right: 20px;
+
+    }
+    &__wrapper {
+      margin-top: -165px;
+    }
+    &__inner,
+    &__inner-two {
+      padding-left: 175px;
+    }
+    &__inner {
+      padding-top: 165px;
+    }
+  }
+}
